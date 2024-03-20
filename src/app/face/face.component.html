@@ -1,0 +1,108 @@
+<div class="head">
+    <h1><u>Create your own QR-CODE here!</u></h1>
+</div>
+<div class="body">
+
+    <div class="row">
+        <div class="column">
+            <div class="box">
+                <div class="card flex justify-content-center">
+                    <div class="flex flex-wrap gap-3">
+                        <div class="flex align-items-center">
+                            <p-radioButton name="selection" value="url" [(ngModel)]="kind"
+                                inputId="ingredient1"></p-radioButton>
+                            <label for="ingredient1" class="ml-2"><i class="pi pi-globe"></i>URL</label>
+                        </div>
+
+                        <div class="flex align-items-center">
+                            <p-radioButton name="selection" value="wlan" [(ngModel)]="kind"
+                                inputId="ingredient2"></p-radioButton>
+                            <label for="ingredient2" class="ml-2"> <i class="pi pi-wifi"></i>WIFI</label>
+                        </div>
+
+                        <div class="flex align-items-center">
+                            <p-radioButton name="selection" value="vcard" [(ngModel)]="kind"
+                                inputId="ingredient3"></p-radioButton>
+                            <label for="ingredient3" class="ml-2"><i class="pi pi-id-card"></i>VCARD</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="area">
+                    <div *ngIf="this.kind =='url'">
+                        <h3>URL</h3>
+                        <input type="text" id="inputText" [(ngModel)]="inputText"
+                            (keyup.enter)="handleEnterKey($event)">
+                        <br><br>
+
+                        <p-button label="Generate" [rounded]="true" severity="info" icon="pi pi-check"
+                            (click)="generateQRCode()"></p-button>
+
+
+                    </div>
+                    <div *ngIf="this.kind =='wlan'">
+
+                        <h3>SSID</h3>
+                        <input type="text" id="inputSSID" [(ngModel)]="inputSSID"
+                            (keyup.enter)="handleEnterKey($event)">
+                        <br>
+                        <h3>password</h3>
+                        <input type="text" id="inputPw" [(ngModel)]="inputPw" (keyup.enter)="handleEnterKey($event)">
+                        <br><br>
+
+                        <p-button label="Generate" [rounded]="true" severity="info" icon="pi pi-check"
+                            (click)="generateQRCode()"></p-button>
+
+                    </div>
+                    <div *ngIf="this.kind =='vcard'">
+
+                        <h3>name</h3>
+                        <input type="text" id="inputName" [(ngModel)]="inputName">
+
+                        <h3>Telephone Number</h3>
+                        <input type="text" id="inputTEL" [(ngModel)]="inputTEL">
+
+                        <h3>e-mail</h3>
+                        <input type="text" id="inputMail" [(ngModel)]="inputMail">
+                        <br><br>
+                        <p-button label="Generate" [rounded]="true" severity="info" icon="pi pi-check"
+                            (click)="generateVCardQRCode()"></p-button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="qrCode" *ngIf="generated">
+            <div class="column">
+
+                <h2><u>QR Code</u></h2>
+                <div class="qrCode-generated">
+
+                    <qr-code [value]="qrCodeValue" [size]="300" [errorCorrectionLevel]="'M'"></qr-code>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="footer">
+
+            <div class="card-container">
+                <p-card *ngFor="let image of footerImages" [style.width]="'360px'" class="mb-3">
+                    <ng-template pTemplate="header"></ng-template>
+                    <a [href]="image.link" target="_blank">
+                        <h2>{{image.caption}}</h2>
+                    </a>
+                    <a [href]="image.link" target="_blank">
+                        <img [src]="image.imagePath" alt="Werbung" style="height: 18vh;">
+                    </a>
+                    <h4 [innerHTML]="image.text"></h4>
+                    <ng-template pTemplate="footer"></ng-template>
+                </p-card>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>

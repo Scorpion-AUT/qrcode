@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+@import 'primeng/resources/themes/saga-blue/theme.css';
+@import 'primeng/resources/primeng.min.css';
+@import 'primeicons/primeicons.css';
+
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: #f6f6f6;
+
+
+}
+
+/* Breite des Scrollbalkens */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Farbe des Hintergrunds des Scrollbalkens */
+::-webkit-scrollbar-track {
+    background: #f6f6f6;
+}
+
+/* Farbe des Griffes (der bewegliche Teil des Scrollbalkens) */
+::-webkit-scrollbar-thumb {
+    background: #cdcbcb;
+    border-radius: 30px;
+}
+
+/* Ändern des Hover-Stils des Scrollbalkengriffs */
+::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+}

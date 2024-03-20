@@ -1,0 +1,140 @@
+.body {
+  height: auto;
+}
+
+h4 {
+  margin-bottom: 3px;
+}
+
+h1 {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.box.large>div {
+  height: 300px;
+}
+
+p-button {
+  margin: 15px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 40vw;
+  border: 3px solid rgb(165, 165, 165);
+  border-radius: 10px;
+  background-color: rgb(209, 209, 209);
+}
+
+.canvas {
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.p-card {
+  flex: 0 1 calc(33.33% - 10px);
+}
+
+.footer {
+  width: 100%;
+  margin: 0 15px;
+  margin-top: 20px;
+  max-height: 20px;
+}
+
+.card-container p-card {
+  display: inline-block;
+  
+  margin-right: 20px;
+  vertical-align: top;
+  
+}
+
+
+.card-body p-card {
+  height: 600px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+
+img {
+  width: 85%;
+  
+}
+
+.pi {
+  margin-left: 9px;
+  margin-right: 9px;
+}
+
+.flex {
+  margin-bottom: 5px;
+}
+
+/* Für Bildschirme bis zu einer Breite von 600px */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100vw;
+    margin: 15px 0px;
+    padding: 15px;
+  }
+  h1{
+    font-size: 24px;
+  }
+  img{
+    width: 60%;
+  }
+  .card-container p-card{
+    margin: 10px;
+  }
+}
+
+/* Für Bildschirme ab 601px Breite */
+@media screen and (min-width: 601px) {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+
+  .column {
+    float: left;
+    width: 40vw;
+    padding: 15px;
+    border: 3px solid rgb(165, 165, 165);
+    border-radius: 10px;
+    background-color: rgb(209, 209, 209);
+    margin: 60px;
+
+  }
+  .card-container p-card{
+    margin: 10px;
+    margin-left: 25px;
+    min-width: 30rem;
+  }
+  img{
+    width: 65%;
+  }
+  h4{
+    min-height: 11rem;
+  }
+}
+.qrCode-generated{
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
