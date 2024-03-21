@@ -29,7 +29,7 @@ export class FaceComponent {
 
   constructor(){
     this.footerImages=[
-      {imagePath:'../assets/CIIT.jpg', caption:'provided by', link:'https://ciit-software.com/', text:'to our homepage<br>We develop custom software solutions perfectly tailored to your needs. From ideation and conceptualization to implementation, deployment, training, and support, we guide you through the entire process. Our projects are based on the agile software development method Scrum, which has proven to be the most effective approach.' },
+      {imagePath:'../assets/CIIT_Logo.jpg' , caption:'provided by', link:'https://ciit-software.com/', text:'to our homepage<br>We develop custom software solutions perfectly tailored to your needs. From ideation and conceptualization to implementation, deployment, training, and support, we guide you through the entire process. Our projects are based on the agile software development method Scrum, which has proven to be the most effective approach.' },
 
       {imagePath:'../assets/SchulungsRaum.avif', caption:'our Courses', link:'https://ciit-training.com/en/schulungen/',text: 'to our Courses <br> <br>We offer versatile tech training: Remote, Classroom, or In-House. Tailored to you by experienced engineers.'},
       

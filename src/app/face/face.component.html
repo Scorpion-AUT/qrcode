@@ -93,7 +93,7 @@
                         <h2>{{image.caption}}</h2>
                     </a>
                     <a [href]="image.link" target="_blank">
-                        <img [src]="image.imagePath" alt="Werbung" style="height: 18vh;">
+                        <img [src]="image.imagePath" alt="Werbung" [class.large-image]="image.imagePath === '../assets/CIIT.jpg'"style="height: 18vh;">
                     </a>
                     <h4 [innerHTML]="image.text"></h4>
                     <ng-template pTemplate="footer"></ng-template>
